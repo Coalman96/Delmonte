@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+i {
+  font-style: normal;
+}
+
+.flex {
+  display: flex;
+}
+
+.inner {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: NanumSquareB;
+  src: url(./fonts/NanumSquareB.woff2);
+}
+header {
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  text-align: center;
+}
+header h1 img {
+  width: 60px;
+}
+header nav {
+  width: 500px;
+}
+header nav ul li {
+  flex: 1 0;
+}
+header .search figure img {
+  width: 22px;
+}
+
+main {
+  text-align: center;
+}
+main .slideContainer {
+  overflow: hidden;
+}
+main .slideContainer .slideWrap {
+  width: 300%;
+}
+main .slideContainer .slideWrap .slide {
+  width: 100%;
+}
+main .slideContainer .slideWrap .slide figure img {
+  width: 100%;
+}
+main .items {
+  margin-top: 46px;
+  justify-content: space-between;
+  gap: 158px;
+  font-size: 16px;
+}
+main .items li h3 {
+  line-height: 44px;
+}
+main .items li a {
+  display: block;
+  width: 100%;
+  border: 1px solid #00833f;
+  border-radius: 15px;
+  line-height: 36px;
+  margin-top: 26px;
+  color: #00833f;
+}
+main .items li a:hover {
+  background-color: #00833f;
+  color: #fff;
+}
+main .itemsContainer hgroup {
+  padding-top: 40px;
+}
+main .itemsContainer hgroup h2 {
+  font-size: 20px;
+}
+main .itemsContainer hgroup h1 {
+  font-size: 50px;
+}
+main .itemsContainer .mainItemWrap {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .itemsContainer .mainItemWrap li {
+  text-align: center;
+  width: 240px;
+  height: 338px;
+  border: 1px solid #e7e7e7;
+}
+main .itemsContainer .mainItemWrap li figure img {
+  width: 100%;
+}
+main .itemsContainer .mainItemWrap li a {
+  color: #00833f;
+  display: block;
+  margin: 13px auto;
+  width: 138px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #00833f;
+  border-radius: 50px;
+}
+main .itemsContainer .mainItemWrap li a:hover {
+  background-color: #00833f;
+  color: #fff;
+}
+main .itemsContainer .subItemsContainer {
+  display: none;
+  position: relative;
+  font-size: 16px;
+  text-align: left;
+  background-color: #00833f;
+  height: 500px;
+}
+main .itemsContainer .subItemsContainer figure img {
+  height: 338px;
+}
+main .itemsContainer .subItemsContainer .subItemWrap {
+  justify-content: space-evenly;
+  color: #fff;
+}
+main .itemsContainer .subItemsContainer .subItemWrap .subItem hgroup h4 {
+  margin-top: 40px;
+}
+main .itemsContainer .subItemsContainer .subItemWrap .subItem hgroup h2 {
+  font-size: 50px;
+}
+main .itemsContainer .subItemsContainer .subItemWrap .subItem .desc h3 {
+  font-size: 20px;
+  padding-top: 40px;
+}
+main .itemsContainer .subItemsContainer .subItemWrap .subItem .desc p {
+  margin-bottom: 72px;
+}
+main .itemsContainer .subItemsContainer .subItemWrap .subItem a {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+main .itemsContainer .subItemsContainer .subItemWrap .subItem a i {
+  display: block;
+  width: 100%;
+  font-size: 50px;
+  font-weight: normal;
+  color: #fff;
+}
+main .itemsContainer .subItemsContainer .subItemsList {
+  justify-content: space-between;
+}
+main .itemsContainer .subItemsContainer .subItemsList li {
+  background: #fff;
+  width: 94px;
+  height: 94px;
+  border: 1px solid #000;
+}
+main .itemsContainer .subItemsContainer .subItemsList li figure {
+  height: 100%;
+}
+main .itemsContainer .subItemsContainer .subItemsList li figure img {
+  height: 100%;
+}
