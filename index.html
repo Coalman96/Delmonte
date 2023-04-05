@@ -148,7 +148,7 @@
             </li>
           </ul>
           <div>
-              <div class="subItemsContainer" id="banana">
+              <div class="subItemsContainer abc" id="banana">
                 <div class="subItemWrap inner flex">
                   <figure>
                     <img src="./images/바나나thum.png" alt="바나나1" />
@@ -578,20 +578,43 @@
         })
         //mainItemWrap의 a를 클릭하면 
         //subItemsContainer의 클래스가 on이 된다.
+        /*
+        1. View 클릭 시 currentHref에 클래스 on이 추가되고 높이가 animate된다.
+        // addClass, animate
+        // 기존 subItemsContainer 하위요소들의 높이가 전부 0이 되어야한다.
+        2. 형제들 중 on클래스가 한개라도있으면 fade를 실행시킨다.
+        // if, each, hasClass, fade
+        3. 
+        */
         $('.mainItemWrap li a').click(function(e){
           e.preventDefault()
             let currentHref = $(e.target).attr('href')
-            let changeColor = $(e.target).parents('.mainItemWrap').find('li a')
-            $(changeColor).css({'background-color':'','color':''})
-            $(e.target).css({'background-color':'#00833f','color':'#ffffff'})
-            $(currentHref).siblings().hide()
-            $(currentHref).stop().fadeIn()
+            console.log(currentHref)
+            let currentHeight = $(currentHref).closest('.subItemsContainer').outerHeight(true)
+            console.log(currentHeight)
+            let asc = $(currentHref).closest('.subItemsContainer').siblings()
+            asc.each(function(){
+              let sw = $(this).hasClass('abc')
+              if(sw){
+                console.log($(this))
+              }
+            })
+
+
+            // let changeColor = $(e.target).parents('.mainItemWrap').find('li a')
+            // $(changeColor).css({'background-color':'','color':''})
+            // $(e.target).css({'background-color':'#00833f','color':'#ffffff'})
+            // $(currentHref).animate({'height':'100%'})
+            // $(currentHref).siblings().hide()
+            // $(currentHref).stop().fadeIn()
         })
         $('.subItem a i').click(function(e){
           e.preventDefault()
+          let changeColor = $(e.target).parents('article').find('.mainItemWrap li a')
+          console.log(changeColor)
+          $(changeColor).css({'background-color':'','color':''})
           let currentParent = $(this).closest('.subItemsContainer')
           $(currentParent).slideUp()
-          console.log(currentParent)
         })
     </script>
   </body>
