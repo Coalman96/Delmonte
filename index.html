@@ -147,8 +147,8 @@
               </a>
             </li>
           </ul>
-          <div>
-              <div class="subItemsContainer abc" id="banana">
+          <div class="subItemsBox">
+              <div class="subItemsContainer" id="banana">
                 <div class="subItemWrap inner flex">
                   <figure>
                     <img src="./images/바나나thum.png" alt="바나나1" />
@@ -310,7 +310,7 @@
               </a>
             </li>
           </ul>
-          <div>
+          <div class="subItemsBox">
               <div class="subItemsContainer" id="grape">
                 <div class="subItemWrap inner flex">
                   <figure>
@@ -470,7 +470,7 @@
               </a>
             </li>
           </ul>
-          <div>
+          <div class="subItemsBox">
               <div class="subItemsContainer" id="tomato">
                 <div class="subItemWrap inner flex">
                   <figure>
@@ -589,17 +589,38 @@
         $('.mainItemWrap li a').click(function(e){
           e.preventDefault()
             let currentHref = $(e.target).attr('href')
-            console.log(currentHref)
-            let currentHeight = $(currentHref).closest('.subItemsContainer').outerHeight(true)
-            console.log(currentHeight)
-            let asc = $(currentHref).closest('.subItemsContainer').siblings()
-            asc.each(function(){
-              let sw = $(this).hasClass('abc')
+            //부모요소에 의해 숨겨진 currentHref의 높이를 가져온다.
+            let currentHeight = $(currentHref).outerHeight()
+            //선택된 요소의 형제들을 가져온다.
+            let bro = $(currentHref).closest('.subItemsContainer').siblings()
+            //클릭할때마다 높이를 변경할 부모박스를 가져온다.
+            let hideBox = $(currentHref).closest('.subItemsBox')
+            //부모박스의 높이가 첫번째로 클릭한 currentHref의 높이로 변하면
+            hideBox.stop().animate({'height':`${currentHeight}`})
+            //클릭한 것을 fadeIn시킨다.
+            bro.fadeOut()
+            $(currentHref).fadeIn()
+            let changeColor = $(e.target).parents('.mainItemWrap').find('li a')
+            $(changeColor).css({'background-color':'','color':''})
+            $(e.target).css({'background-color':'#00833f','color':'#ffffff'})
+
+
+
+            
+            /* 잠시 보류
+            //클래스 on이 붙은 형제들을 찾기한 값을 가져온다.
+            let bro = $(currentHref).closest('.subItemsContainer').siblings()
+            //각 형제들을 돌면서 클래스 on이 붙었는지 확인한다.
+            bro.each(function(){
+              //인자값을 this로 받아서 하나씩 on이 붙었는지 확인한다.
+              //javascript와 다른점은 인자값을 지정하는것이아니라 this로 작성한다.
+              let sw = $(this).hasClass('on')
+              //
               if(sw){
                 console.log($(this))
               }
             })
-
+            */
 
             // let changeColor = $(e.target).parents('.mainItemWrap').find('li a')
             // $(changeColor).css({'background-color':'','color':''})
@@ -611,10 +632,15 @@
         $('.subItem a i').click(function(e){
           e.preventDefault()
           let changeColor = $(e.target).parents('article').find('.mainItemWrap li a')
-          console.log(changeColor)
-          $(changeColor).css({'background-color':'','color':''})
           let currentParent = $(this).closest('.subItemsContainer')
-          $(currentParent).slideUp()
+          let bro = currentParent.siblings()
+          console.log(bro)
+          let hideBox = $(currentParent).closest('.subItemsBox')
+          hideBox.stop().animate({'height':''},function(){
+            currentParent.hide()
+          })
+          $(changeColor).css({'background-color':'','color':''})
+
         })
     </script>
   </body>

@@ -128,36 +128,39 @@ main .itemsContainer .mainItemWrap li a:hover {
   background-color: #00833f;
   color: #fff;
 }
-main .itemsContainer .subItemsContainer {
+main .itemsContainer .subItemsBox {
   height: 0;
   overflow: hidden;
+}
+main .itemsContainer .subItemsBox .subItemsContainer {
+  display: none;
   position: relative;
   font-size: 16px;
   text-align: left;
   background-color: #00833f;
 }
-main .itemsContainer .subItemsContainer .subItemWrap {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap {
   height: 100%;
   justify-content: space-evenly;
   color: #fff;
 }
-main .itemsContainer .subItemsContainer .subItemWrap figure img {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap figure img {
   height: 338px;
 }
-main .itemsContainer .subItemsContainer .subItemWrap .subItem hgroup h4 {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap .subItem hgroup h4 {
   margin-top: 40px;
 }
-main .itemsContainer .subItemsContainer .subItemWrap .subItem hgroup h2 {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap .subItem hgroup h2 {
   font-size: 50px;
 }
-main .itemsContainer .subItemsContainer .subItemWrap .subItem .desc h3 {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap .subItem .desc h3 {
   font-size: 20px;
   padding-top: 40px;
 }
-main .itemsContainer .subItemsContainer .subItemWrap .subItem .desc p {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap .subItem .desc p {
   margin-bottom: 72px;
 }
-main .itemsContainer .subItemsContainer .subItemWrap .subItem a {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap .subItem a {
   text-align: center;
   position: absolute;
   top: 0;
@@ -167,25 +170,25 @@ main .itemsContainer .subItemsContainer .subItemWrap .subItem a {
   background-color: transparent;
   border: none;
 }
-main .itemsContainer .subItemsContainer .subItemWrap .subItem a i {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap .subItem a i {
   display: block;
   width: 100%;
   font-size: 50px;
   font-weight: normal;
   color: #fff;
 }
-main .itemsContainer .subItemsContainer .subItemsList {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemsList {
   justify-content: space-between;
 }
-main .itemsContainer .subItemsContainer .subItemsList li {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemsList li {
   background: #fff;
   width: 94px;
   height: 94px;
   border: 1px solid #000;
 }
-main .itemsContainer .subItemsContainer .subItemsList li figure {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemsList li figure {
   height: 100%;
 }
-main .itemsContainer .subItemsContainer .subItemsList li figure img {
+main .itemsContainer .subItemsBox .subItemsContainer .subItemsList li figure img {
   height: 100%;
 }

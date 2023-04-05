@@ -141,70 +141,73 @@ main {
         }
       }
     }
-    .subItemsContainer {
+    .subItemsBox {
       height: 0;
       overflow: hidden;
-      position: relative;
-      font-size: 16px;
-      text-align: left;
-      background-color: #00833f;
-      .subItemWrap {
-        figure {
-          img {
-            height: 338px;
-          }
-        }
-        height: 100%;
-        justify-content: space-evenly;
-        color: #fff;
-        .subItem {
-          hgroup {
-            h4 {
-              margin-top: 40px;
-            }
-            h2 {
-              font-size: 50px;
-            }
-          }
-          .desc {
-            h3 {
-              font-size: 20px;
-              padding-top: 40px;
-            }
-            p {
-              margin-bottom: 72px;
-            }
-          }
-          a {
-            text-align: center;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50px;
-            height: 50px;
-            background-color: transparent;
-            border: none;
-            i {
-              display: block;
-              width: 100%;
-              font-size: 50px;
-              font-weight: normal;
-              color: #fff;
-            }
-          }
-        }
-      }
-      .subItemsList {
-        justify-content: space-between;
-        li {
-          background: #fff;
-          width: 94px;
-          height: 94px;
-          border: 1px solid #000;
+      .subItemsContainer {
+        display: none;
+        position: relative;
+        font-size: 16px;
+        text-align: left;
+        background-color: #00833f;
+        .subItemWrap {
           figure {
-            height: 100%;
             img {
+              height: 338px;
+            }
+          }
+          height: 100%;
+          justify-content: space-evenly;
+          color: #fff;
+          .subItem {
+            hgroup {
+              h4 {
+                margin-top: 40px;
+              }
+              h2 {
+                font-size: 50px;
+              }
+            }
+            .desc {
+              h3 {
+                font-size: 20px;
+                padding-top: 40px;
+              }
+              p {
+                margin-bottom: 72px;
+              }
+            }
+            a {
+              text-align: center;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 50px;
+              height: 50px;
+              background-color: transparent;
+              border: none;
+              i {
+                display: block;
+                width: 100%;
+                font-size: 50px;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+          }
+        }
+        .subItemsList {
+          justify-content: space-between;
+          li {
+            background: #fff;
+            width: 94px;
+            height: 94px;
+            border: 1px solid #000;
+            figure {
               height: 100%;
+              img {
+                height: 100%;
+              }
             }
           }
         }
