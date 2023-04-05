@@ -82,6 +82,12 @@ main {
     gap: 158px;
     font-size: 16px;
     li {
+      &.on{
+        a{
+          background-color: #00833f;
+          color: #fff;
+        }
+      }
       h3 {
         line-height: 44px;
       }
@@ -89,10 +95,9 @@ main {
         display: block;
         width: 100%;
         border: 1px solid #00833f;
-        border-radius: 15px;
+        border-radius: 100px;
         line-height: 36px;
         margin-top: 26px;
-        // background-color: #00833f;
         color: #00833f;
         &:hover {
           background-color: #00833f;
@@ -144,12 +149,21 @@ main {
     .subItemsBox {
       height: 0;
       overflow: hidden;
+      position: relative;
       .subItemsContainer {
-        display: none;
-        position: relative;
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 16px;
         text-align: left;
         background-color: #00833f;
+        opacity: 0;
+        transition: 0.3s;
+        &.on{
+          opacity: 1;
+          z-index: 999;
+        }
         .subItemWrap {
           figure {
             img {
@@ -202,7 +216,8 @@ main {
             background: #fff;
             width: 94px;
             height: 94px;
-            border: 1px solid #000;
+            margin-bottom: 10px;
+            cursor: pointer;
             figure {
               height: 100%;
               img {

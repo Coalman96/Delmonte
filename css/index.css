@@ -76,6 +76,10 @@ main .items {
   gap: 158px;
   font-size: 16px;
 }
+main .items li.on a {
+  background-color: #00833f;
+  color: #fff;
+}
 main .items li h3 {
   line-height: 44px;
 }
@@ -83,7 +87,7 @@ main .items li a {
   display: block;
   width: 100%;
   border: 1px solid #00833f;
-  border-radius: 15px;
+  border-radius: 100px;
   line-height: 36px;
   margin-top: 26px;
   color: #00833f;
@@ -131,13 +135,22 @@ main .itemsContainer .mainItemWrap li a:hover {
 main .itemsContainer .subItemsBox {
   height: 0;
   overflow: hidden;
+  position: relative;
 }
 main .itemsContainer .subItemsBox .subItemsContainer {
-  display: none;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 16px;
   text-align: left;
   background-color: #00833f;
+  opacity: 0;
+  transition: 0.3s;
+}
+main .itemsContainer .subItemsBox .subItemsContainer.on {
+  opacity: 1;
+  z-index: 999;
 }
 main .itemsContainer .subItemsBox .subItemsContainer .subItemWrap {
   height: 100%;
@@ -184,7 +197,8 @@ main .itemsContainer .subItemsBox .subItemsContainer .subItemsList li {
   background: #fff;
   width: 94px;
   height: 94px;
-  border: 1px solid #000;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 main .itemsContainer .subItemsBox .subItemsContainer .subItemsList li figure {
   height: 100%;
